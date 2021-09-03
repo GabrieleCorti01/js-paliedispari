@@ -1,24 +1,31 @@
-let parolaDaVerificare = prompt("Inserisci una parola");
+// Chiedere all’utente di inserire una parola
+// Creare una funzione per capire se la parola inserita è palindroma
 
-while (parolaDaVerificare.length == 0){
-    parolaDaVerificare = prompt("Inserisci una parola");
-}
-console.log(isPalindrome(parolaDaVerificare))
+let parolaUtente = prompt("inserisci una parola");
+let isPalindromo = verificaPalindromo(parolaUtente)
+console.log(isPalindromo)
 
-function reverseWord(word){
-    if (word.length == 0 || word.length == 1) {
-        return word;
-    } else {
-        
-        let reversedWord = word.split('').reverse().join('');
-        return reversedWord;
-    }
+if (isPalindromo == true){
+    console.log("è palindromo")
+} else {
+    console.log("non è palindromo!")
 }
 
-function isPalindrome(word){
-    let trimmedWord = word.trim().toLowerCase();   
-    if ( trimmedWord === reverseWord(trimmedWord)){ 
-        return true;
+// Inizio funzione
+function verificaPalindromo (parola){
+    console.log(parola.length)
+    // girare la parola al contrario
+    let parolaAlContrario = "";
+    for ( let i = parola.length - 1; i >= 0 ;i--){
+        parolaAlContrario = parolaAlContrario + parola[i];
+        // verificare che la parola al contrario sia uguale alla parola normale
     } 
-    return false;   
+    console.log(parolaAlContrario)
+    if (parolaAlContrario.toUpperCase() == parola.toUpperCase()){
+        return true;
+
+    } else {
+        return false;
+    }
+    
 }
