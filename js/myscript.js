@@ -6,7 +6,7 @@
 // Dichiariamo chi ha vinto.
 
 
-// far scegliere all'utente se pari o dispari
+// far scegliere all'utente se è pari o dispari
 let sceltaUtente = prompt("Scegli se pari o dispari!");
 console.log(sceltaUtente)
 sceltaUtente = sceltaUtente.toUpperCase()
