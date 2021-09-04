@@ -18,7 +18,7 @@ function verificaPalindromo (parola){
     let parolaAlContrario = "";
     for ( let i = parola.length - 1; i >= 0 ;i--){
         parolaAlContrario = parolaAlContrario + parola[i];
-        // verificare che la parola al contrario sia uguale alla parola normale
+    // verificare che la parola al contrario sia uguale alla parola normale
     } 
     console.log(parolaAlContrario)
     if (parolaAlContrario.toUpperCase() == parola.toUpperCase()){
